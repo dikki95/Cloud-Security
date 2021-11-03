@@ -46,7 +46,7 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _Whitelisted IP address:_ _My personal IP address!_
 
-Machines within the network can only be accessed by Jumb Box SSH.
+Machines within the network can only be accessed by Jump Box SSH.
 - _Which machine did you allow to access your ELK VM?_ _The Jumb Box was the only machine allowed access to the Elk VM._ 
 - _What was its IP address?_ _The IP address is: 40.114.76.27_
 
@@ -76,7 +76,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _The IP addresses of the machines I am monitoring are:_ _10.0.0.5; 10.0.0.7; 10.1.0.4_
+- _The IP addresses of the machines I am monitoring are:_ _10.0.0.5; 10.0.0.7;_
 
 We have installed the following Beats on these machines:
 - _Filebeats and Metricbeats_
@@ -96,9 +96,9 @@ SSH into the control node and follow the steps below:
 ## PlayBook Contiued
 - _Which file is the playbook? The playbook Roles file._ 
 - _Where do you copy it?_ _You copy it to the Web Virtual Machine's._
-- _Which file do you update to make Ansible run the playbook on a specific machine? You update the Configuration file to make the Ansible run the playbook._ 
-- _How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ _To specify which machine to install the Elk server on is specified in the configuration file._
-- _Which URL do you navigate to in order to check that the ELK server is running?_ _You will need to the navigate to Filebeat installation page on the Elk server website and use the GUI._
+- _Which file do you update to make Ansible run the playbook on a specific machine? You update the line in your ansible scripts on the `hosts` line of the file to make the Ansible run the playbook._ 
+- _How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ _To specify which machine to install the Elk server on is specified in the `hosts` file._
+- _Which URL do you navigate to in order to check that the ELK server is running?_ _You will need to the navigate to http://20.119.207.60:5601/app/kibana to access Kibana on the Elk server website.
 
 _The specific commands the user will need to run to download the playbook, update the files, etc._ 
 - _$ansible-playbook filebeat-playbook.yml_
